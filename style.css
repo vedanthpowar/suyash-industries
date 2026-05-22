@@ -535,6 +535,52 @@ footer {
     font-size: 0.9rem;
 }
 
+/* GDPR Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent-primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 800px;
+    width: 90%;
+    transition: all 0.5s ease;
+}
+
+.cookie-banner.hidden {
+    bottom: -150px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cookie-banner p {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.cookie-banner a {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
 /* Animations */
 .reveal-fade {
     opacity: 0;
