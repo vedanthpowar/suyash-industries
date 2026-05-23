@@ -1,15 +1,15 @@
 /* Base Styles & Variables */
 :root {
-    --bg-primary: #0a0b10;
-    --bg-secondary: #12141c;
-    --text-primary: #f0f2f5;
-    --text-secondary: #a0a5b5;
-    --accent-primary: #3b82f6;
-    --accent-secondary: #60a5fa;
-    --gradient-accent: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    --bg-primary: #080a0f;
+    --bg-secondary: #10141d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent-primary: #0ea5e9;
+    --accent-secondary: #38bdf8;
+    --gradient-accent: linear-gradient(135deg, #0ea5e9, #14b8a6);
     --border-color: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(20, 22, 30, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(16, 20, 29, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.12);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
