@@ -81,18 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = 'Sending...';
             btn.style.opacity = '0.7';
             
-            // Simulate API call
-            setTimeout(() => {
-                btn.textContent = 'Request Sent Successfully!';
-                btn.style.background = '#10b981'; // Success green
-                contactForm.reset();
-                
+            // Formspree API call
+            const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORMSPREE_ID_HERE'; // REPLACE THIS
+            const formData = new FormData(contactForm);
+
+            fetch(formspreeEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    btn.textContent = 'Request Sent Successfully!';
+                    btn.style.background = '#10b981'; // Success green
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            btn.textContent = data.errors.map(error => error.message).join(', ');
+                        } else {
+                            btn.textContent = 'Oops! There was a problem';
+                        }
+                        btn.style.background = '#ef4444'; // Error red
+                    }).catch(() => {
+                        btn.textContent = 'Oops! There was a problem';
+                        btn.style.background = '#ef4444'; // Error red
+                    });
+                }
+            })
+            .catch(error => {
+                btn.textContent = 'Oops! There was a problem';
+                btn.style.background = '#ef4444'; // Error red
+            })
+            .finally(() => {
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.style.background = '';
                     btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
+                }, 4000);
+            });
         });
     }
 
