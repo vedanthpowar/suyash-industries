@@ -227,8 +227,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 11, 16, 0.95) 0%, rgba(10, 11, 16, 0.4) 100%),
-                url('hero_bg.png') center/cover no-repeat;
+    background: linear-gradient(to right, rgba(8, 10, 15, 0.95) 0%, rgba(8, 10, 15, 0.4) 100%),
+                url('images/casting_products_premium.png') center/cover no-repeat;
     z-index: -1;
 }
 
@@ -684,5 +684,31 @@ footer {
     
     .services-image {
         height: 300px;
+    }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee img {
+    height: 60px;
+    width: auto;
+    margin: 0 3rem;
+    vertical-align: middle;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.marquee img:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+@media (max-width: 768px) {
+    .marquee img {
+        height: 40px;
+        margin: 0 1.5rem;
     }
 }
