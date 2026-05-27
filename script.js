@@ -113,3 +113,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Tab Switching Logic
+window.switchTab = function(tabId) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    // Add active class to clicked button
+    event.currentTarget.classList.add('active');
+
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+    });
+    // Show target tab pane
+    document.getElementById('tab-' + tabId).classList.add('active');
+}
+
+// Modal Logic
+window.openModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+window.closeModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = 'auto';
+    }
+}

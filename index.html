@@ -156,64 +156,110 @@
                     <div class="product-card reveal-fade">
                         <img src="images/pdc_premium.png" alt="Pressure Die Cast Components">
                         <div class="product-overlay">
-                            <h3>Pressure Die Casting</h3>
+                            <div>
+                                <h3>Pressure Die Casting</h3>
+                                <button class="btn-real-sample" onclick="openModal('modal-pdc')">View Real Floor Samples</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-card reveal-fade delay-1">
                         <img src="images/gdc_premium.png" alt="Gravity Die Cast Components">
                         <div class="product-overlay">
-                            <h3>Gravity Die Casting</h3>
+                            <div>
+                                <h3>Gravity Die Casting</h3>
+                                <button class="btn-real-sample" onclick="openModal('modal-gdc')">View Real Floor Samples</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-card reveal-fade delay-2">
                         <img src="images/sand_casting_premium.png" alt="Sand Cast Components">
                         <div class="product-overlay">
-                            <h3>Sand Casting</h3>
+                            <div>
+                                <h3>Sand Casting</h3>
+                                <button class="btn-real-sample" onclick="openModal('modal-sand')">View Real Floor Samples</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-card reveal-fade delay-3">
                         <img src="images/machining_premium.png" alt="Machined Splined Shafts">
                         <div class="product-overlay">
-                            <h3>CNC Machined Components</h3>
+                            <div>
+                                <h3>CNC Machined Components</h3>
+                                <button class="btn-real-sample" onclick="openModal('modal-machining')">View Real Floor Samples</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
+        <!-- Infrastructure & Facilities Section -->
+        <section id="infrastructure" class="infrastructure">
             <div class="container">
-                <div class="services-wrapper">
-                    <div class="services-content reveal-fade">
-                        <h2 class="subtitle">Full-Cycle Services</h2>
-                        <h2>From Concept to Component</h2>
-                        <div class="accordion">
-                            <div class="accordion-item active">
-                                <div class="accordion-header">Engineering Support & Alloy Selection</div>
-                                <div class="accordion-body">
-                                    <p>Our engineers help you select the perfect aluminum alloy for thermal conductivity, strength, and weight requirements.</p>
+                <div class="section-header reveal-fade text-center">
+                    <h2 class="subtitle">Genuine Setup</h2>
+                    <h2>Our World-Class Facilities</h2>
+                </div>
+                
+                <div class="tabs-container reveal-fade delay-1">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" onclick="switchTab('machining')">Advanced Machining</button>
+                        <button class="tab-btn" onclick="switchTab('casting')">Casting Facilities</button>
+                        <button class="tab-btn" onclick="switchTab('inspection')">Quality & Inspection</button>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <!-- Machining Tab -->
+                        <div id="tab-machining" class="tab-pane active">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Advanced Machining Setup</h3>
+                                    <ul class="facility-list">
+                                        <li><strong>VMC AMS 1060V</strong> - High precision vertical machining center.</li>
+                                        <li><strong>CNC LMW LL20TL5</strong> (2 Nos) - Advanced turning centers.</li>
+                                        <li><strong>CNC ACE Micro J300 & Jobber XL</strong> - For critical component machining.</li>
+                                        <li><strong>Conventional Setup</strong> - Universal Milling, 7-Feet Lathe, Radial Drilling.</li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">Flow & Thermal Simulations</div>
-                                <div class="accordion-body">
-                                    <p>Utilizing advanced software to simulate metal flow and solidification, preventing defects before tooling begins.</p>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">Rapid Prototype Services</div>
-                                <div class="accordion-body">
-                                    <p>Get functional prototypes fast. We test design concepts thoroughly before you commit to high-volume die tooling.</p>
+                                <div class="tab-image">
+                                    <img src="images/facility_machining.png" alt="VMC Machining Setup">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="services-image reveal-fade delay-1">
-                        <div class="image-wrapper" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid var(--border-color);">
-                            <img src="images/vmc_machine_premium.png" alt="Advanced VMC Machine" style="width: 100%; height: auto; display: block; filter: brightness(0.9) contrast(1.1);">
-                            <div class="glass-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(10px); padding: 1.5rem; border-top: 1px solid var(--glass-border); text-align: center;">
-                                <h3 style="margin: 0; color: #fff; font-size: 1.5rem;">Precision Delivered</h3>
+
+                        <!-- Casting Tab -->
+                        <div id="tab-casting" class="tab-pane">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Heavy-Duty Casting Capabilities</h3>
+                                    <ul class="facility-list">
+                                        <li><strong>HPDC 900 TON</strong> (Yizumi) & HPDC up to 200 TON (Huda/Yizumi).</li>
+                                        <li><strong>Hot Chamber Setup</strong> - 88 TON, 90 TON, 138 TON machines.</li>
+                                        <li><strong>Gravity Die Casting</strong> - 4 GDC Machines with Melting holding furnaces.</li>
+                                        <li><strong>Sand Casting</strong> - 1,280 Kg Highest Single Time Pouring Capacity.</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-image">
+                                    <img src="images/facility_casting.png" alt="Casting Facilities">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inspection Tab -->
+                        <div id="tab-inspection" class="tab-pane">
+                            <div class="tab-grid">
+                                <div class="tab-text">
+                                    <h3>Strict Quality & Inspection</h3>
+                                    <ul class="facility-list">
+                                        <li><strong>NDT-DP Testing</strong> - Non-Destructive Dye Penetrant Testing setup.</li>
+                                        <li><strong>Physical Testing</strong> - Tensile Test Machine & Scratch Hardness Machine.</li>
+                                        <li><strong>Precision Gauges</strong> - Digital Height Gauges & customized Air Gauges.</li>
+                                        <li><strong>Temperature Monitoring</strong> - Metal & Die Temperature measuring systems.</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-image">
+                                    <img src="images/facility_inspection.png" alt="Inspection Setup">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -317,7 +363,7 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#infrastructure">Infrastructure</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -339,5 +385,35 @@
         <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our <a href="#">Privacy Policy</a> and Data Processing Agreements in compliance with GDPR.</p>
         <button id="acceptCookies" class="btn-primary">Accept & Continue</button>
     </div>
+    <!-- Lightbox Modals -->
+    <div id="modal-pdc" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-pdc')">&times;</span>
+            <img src="images/real_pdc.png" alt="Real PDC Floor Samples">
+            <div class="modal-caption">Genuine Pressure Die Casting Samples</div>
+        </div>
+    </div>
+    <div id="modal-gdc" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-gdc')">&times;</span>
+            <img src="images/real_gdc.png" alt="Real GDC Floor Samples">
+            <div class="modal-caption">Genuine Gravity Die Casting Samples</div>
+        </div>
+    </div>
+    <div id="modal-sand" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span>
+            <img src="images/real_sand.png" alt="Real Sand Casting Floor Samples">
+            <div class="modal-caption">Genuine Sand Casting Core Box / Jacket</div>
+        </div>
+    </div>
+    <div id="modal-machining" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-machining')">&times;</span>
+            <img src="images/real_machining.png" alt="Real CNC Machining Samples">
+            <div class="modal-caption">Genuine CNC Machined Splined Shafts</div>
+        </div>
+    </div>
+
 </body>
 </html>
