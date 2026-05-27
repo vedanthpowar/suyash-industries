@@ -900,8 +900,11 @@ footer {
     }
 
     .carousel-container {
-        flex-direction: column;
         min-height: auto;
+    }
+    
+    .carousel-slide.active {
+        flex-direction: column;
     }
     
     .slide-image {
@@ -1132,6 +1135,18 @@ footer {
 @media (max-width: 768px) {
     section {
         padding: 4rem 0;
+    }
+
+    .tabs-header {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+    }
+    
+    .tab-btn {
+        flex: 0 0 auto;
+        padding: 1rem 1.5rem;
     }
 
     .nav-links {
