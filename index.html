@@ -220,6 +220,7 @@
                                         <li><strong>CNC ACE Micro J300 & Jobber XL</strong> - For critical component machining.</li>
                                         <li><strong>Conventional Setup</strong> - Universal Milling, 7-Feet Lathe, Radial Drilling.</li>
                                     </ul>
+                                    <button class="btn-fac-sample" onclick="openModal('modal-fac-machining')">View Real Setup Images</button>
                                 </div>
                                 <div class="tab-image">
                                     <img src="images/facility_machining.png" alt="VMC Machining Setup">
@@ -238,6 +239,7 @@
                                         <li><strong>Gravity Die Casting</strong> - 4 GDC Machines with Melting holding furnaces.</li>
                                         <li><strong>Sand Casting</strong> - 1,280 Kg Highest Single Time Pouring Capacity.</li>
                                     </ul>
+                                    <button class="btn-fac-sample" onclick="openModal('modal-fac-casting')">View Real Setup Images</button>
                                 </div>
                                 <div class="tab-image">
                                     <img src="images/facility_casting.png" alt="Casting Facilities">
@@ -256,6 +258,7 @@
                                         <li><strong>Precision Gauges</strong> - Digital Height Gauges & customized Air Gauges.</li>
                                         <li><strong>Temperature Monitoring</strong> - Metal & Die Temperature measuring systems.</li>
                                     </ul>
+                                    <button class="btn-fac-sample" onclick="openModal('modal-fac-inspection')">View Real Setup Images</button>
                                 </div>
                                 <div class="tab-image">
                                     <img src="images/facility_inspection.png" alt="Inspection Setup">
@@ -385,33 +388,78 @@
         <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our <a href="#">Privacy Policy</a> and Data Processing Agreements in compliance with GDPR.</p>
         <button id="acceptCookies" class="btn-primary">Accept & Continue</button>
     </div>
-    <!-- Lightbox Modals -->
+    <!-- Lightbox Modals for Products -->
     <div id="modal-pdc" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-pdc')">&times;</span>
-            <img src="images/real_pdc.png" alt="Real PDC Floor Samples">
-            <div class="modal-caption">Genuine Pressure Die Casting Samples</div>
+            <h3 class="modal-caption">Genuine Pressure Die Casting Samples</h3>
+            <div class="modal-gallery">
+                <img src="images/real/pdc1.png" alt="PDC Floor Sample 1">
+                <img src="images/real/pdc2.png" alt="PDC Floor Sample 2">
+                <img src="images/real/pdc3.png" alt="PDC Floor Sample 3">
+            </div>
         </div>
     </div>
     <div id="modal-gdc" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-gdc')">&times;</span>
-            <img src="images/real_gdc.png" alt="Real GDC Floor Samples">
-            <div class="modal-caption">Genuine Gravity Die Casting Samples</div>
+            <h3 class="modal-caption">Genuine Gravity Die Casting Samples</h3>
+            <div class="modal-gallery">
+                <img src="images/real/gdc1.png" alt="GDC Floor Sample 1">
+                <img src="images/real/gdc2.png" alt="GDC Floor Sample 2">
+                <img src="images/real/gdc3.png" alt="GDC Floor Sample 3">
+            </div>
         </div>
     </div>
     <div id="modal-sand" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span>
-            <img src="images/real_sand.png" alt="Real Sand Casting Floor Samples">
-            <div class="modal-caption">Genuine Sand Casting Core Box / Jacket</div>
+            <h3 class="modal-caption">Genuine Sand Casting Samples</h3>
+            <div class="modal-gallery">
+                <img src="images/real/sand1.png" alt="Sand Casting Floor Sample 1">
+                <img src="images/real/sand2.png" alt="Sand Casting Floor Sample 2">
+            </div>
         </div>
     </div>
     <div id="modal-machining" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-machining')">&times;</span>
-            <img src="images/real_machining.png" alt="Real CNC Machining Samples">
-            <div class="modal-caption">Genuine CNC Machined Splined Shafts</div>
+            <h3 class="modal-caption">Genuine CNC Machining Samples</h3>
+            <div class="modal-gallery">
+                <img src="images/real/machining1.png" alt="Machining Floor Sample 1">
+                <img src="images/real/machining2.png" alt="Machining Floor Sample 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modals for Facilities -->
+    <div id="modal-fac-machining" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-fac-machining')">&times;</span>
+            <h3 class="modal-caption">Genuine Machining Setup</h3>
+            <div class="modal-gallery">
+                <img src="images/real/fac_machining1.png" alt="Machining Setup 1">
+                <img src="images/real/fac_machining2.png" alt="Machining Setup 2">
+            </div>
+        </div>
+    </div>
+    <div id="modal-fac-casting" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-fac-casting')">&times;</span>
+            <h3 class="modal-caption">Genuine Casting Facilities</h3>
+            <div class="modal-gallery">
+                <img src="images/real/fac_casting1.jpeg" alt="Casting Setup 1">
+                <img src="images/real/fac_casting2.jpg" alt="Casting Setup 2">
+            </div>
+        </div>
+    </div>
+    <div id="modal-fac-inspection" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-fac-inspection')">&times;</span>
+            <h3 class="modal-caption">Genuine Inspection Setup</h3>
+            <div class="modal-gallery">
+                <img src="images/real/fac_inspection1.jpg" alt="Inspection Setup 1">
+            </div>
         </div>
     </div>
 
