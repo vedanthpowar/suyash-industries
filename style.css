@@ -703,40 +703,122 @@ footer {
 
 .modal-content {
     margin: 5% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1200px;
+    background: var(--bg-dark);
     position: relative;
-    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
     animation: zoomIn 0.3s ease;
-}
-
-.modal-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     border: 1px solid var(--border-color);
 }
 
-.modal-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.modal-gallery img {
+.carousel-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    min-height: 600px;
+    display: flex;
 }
 
-.modal-caption {
+.carousel-slide {
+    display: none;
+    width: 100%;
+    animation: fadeInSlide 0.5s;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+@keyframes fadeInSlide {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.slide-image {
+    flex: 0 0 60%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.slide-image img {
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+}
+
+.slide-details {
+    flex: 0 0 40%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.slide-details h3 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.slide-details p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.slide-details .tech-specs {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.slide-details .spec-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+
+.slide-details .spec-label {
+    color: var(--accent-primary);
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(14, 165, 233, 0.2);
+    border: 1px solid var(--accent-primary);
     color: white;
-    margin-top: 15px;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
 }
 
 .close-modal {

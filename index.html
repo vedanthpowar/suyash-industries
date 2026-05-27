@@ -388,77 +388,338 @@
         <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our <a href="#">Privacy Policy</a> and Data Processing Agreements in compliance with GDPR.</p>
         <button id="acceptCookies" class="btn-primary">Accept & Continue</button>
     </div>
-    <!-- Lightbox Modals for Products -->
+    <!-- Lightbox Carousels for Products -->
     <div id="modal-pdc" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-pdc')">&times;</span>
-            <h3 class="modal-caption">Genuine Pressure Die Casting Samples</h3>
-            <div class="modal-gallery">
-                <img src="images/real/pdc1.png" alt="PDC Floor Sample 1">
-                <img src="images/real/pdc2.png" alt="PDC Floor Sample 2">
-                <img src="images/real/pdc3.png" alt="PDC Floor Sample 3">
-            </div>
-        </div>
-    </div>
-    <div id="modal-gdc" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal-gdc')">&times;</span>
-            <h3 class="modal-caption">Genuine Gravity Die Casting Samples</h3>
-            <div class="modal-gallery">
-                <img src="images/real/gdc1.png" alt="GDC Floor Sample 1">
-                <img src="images/real/gdc2.png" alt="GDC Floor Sample 2">
-                <img src="images/real/gdc3.png" alt="GDC Floor Sample 3">
-            </div>
-        </div>
-    </div>
-    <div id="modal-sand" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span>
-            <h3 class="modal-caption">Genuine Sand Casting Samples</h3>
-            <div class="modal-gallery">
-                <img src="images/real/sand1.png" alt="Sand Casting Floor Sample 1">
-                <img src="images/real/sand2.png" alt="Sand Casting Floor Sample 2">
-            </div>
-        </div>
-    </div>
-    <div id="modal-machining" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal-machining')">&times;</span>
-            <h3 class="modal-caption">Genuine CNC Machining Samples</h3>
-            <div class="modal-gallery">
-                <img src="images/real/machining1.png" alt="Machining Floor Sample 1">
-                <img src="images/real/machining2.png" alt="Machining Floor Sample 2">
+            <div class="carousel-container" id="carousel-pdc">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/pdc1.png" alt="PDC Sample 1"></div>
+                    <div class="slide-details">
+                        <h3>Precision Motor Body</h3>
+                        <p>High-pressure die cast aluminum motor housing designed for excellent thermal dissipation and structural rigidity. Our HPDC process ensures tight dimensional tolerances and a pristine surface finish straight from the mold.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Process:</span><span>HPDC (High Pressure Die Casting)</span></div>
+                            <div class="spec-item"><span class="spec-label">Alloy:</span><span>Aluminum</span></div>
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>~2.0 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/pdc2.png" alt="PDC Sample 2"></div>
+                    <div class="slide-details">
+                        <h3>Complex Bracket Assembly</h3>
+                        <p>A critical structural bracket manufactured using our 900 TON Yizumi machine. The design incorporates intricate ribbing for strength-to-weight optimization, perfect for automotive applications.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Process:</span><span>HPDC (High Pressure Die Casting)</span></div>
+                            <div class="spec-item"><span class="spec-label">Machine:</span><span>900 TON Yizumi</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/pdc3.png" alt="PDC Sample 3"></div>
+                    <div class="slide-details">
+                        <h3>Fluid Control Housing</h3>
+                        <p>A pressure die cast fluid control housing requiring absolute zero porosity. We utilize advanced flow simulation and strict process controls to ensure leak-proof performance under high pressure.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Quality:</span><span>100% Leak Tested</span></div>
+                            <div class="spec-item"><span class="spec-label">Process:</span><span>Cold Chamber Die Casting</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/pdc4.png" alt="PDC Sample 4"></div>
+                    <div class="slide-details">
+                        <h3>Telecommunication Heat Sink</h3>
+                        <p>Designed with extremely thin and dense cooling fins. High pressure die casting allows us to achieve the necessary thin-wall sections that maximize surface area and thermal conductivity.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/pdc5.png" alt="PDC Sample 5"></div>
+                    <div class="slide-details">
+                        <h3>Automotive Gear Cover</h3>
+                        <p>A lightweight, durable cover featuring precision-machined mating surfaces directly out of the cast. Designed to protect delicate internal mechanisms while reducing overall vehicle weight.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/pdc6.png" alt="PDC Sample 6"></div>
+                    <div class="slide-details">
+                        <h3>Pneumatic Cylinder Cap</h3>
+                        <p>Precision cast cap for heavy-duty pneumatic applications. Features cast-in threads and high structural integrity to withstand repetitive impact forces.</p>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-pdc', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-pdc', 1)">&#10095;</button>
             </div>
         </div>
     </div>
 
-    <!-- Lightbox Modals for Facilities -->
+    <div id="modal-gdc" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-gdc')">&times;</span>
+            <div class="carousel-container" id="carousel-gdc">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/gdc1.png" alt="GDC Sample 1"></div>
+                    <div class="slide-details">
+                        <h3>Heavy Duty Sump Casting</h3>
+                        <p>An extremely robust sump casting manufactured using gravity die casting. The GDC process allows for excellent mechanical properties and soundness in thicker cross-sections.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>42.0 KG</span></div>
+                            <div class="spec-item"><span class="spec-label">Process:</span><span>Gravity Die Casting</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/gdc2.png" alt="GDC Sample 2"></div>
+                    <div class="slide-details">
+                        <h3>Industrial Valve Body</h3>
+                        <p>Gravity die cast valve body designed for high-pressure industrial fluid management. GDC ensures a dense, porosity-free internal structure critical for pressure vessels.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>18.0 KG</span></div>
+                            <div class="spec-item"><span class="spec-label">Application:</span><span>Hydraulics</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/gdc3.png" alt="GDC Sample 3"></div>
+                    <div class="slide-details">
+                        <h3>High-Strength Motor Cover</h3>
+                        <p>A highly durable motor body cover. By using steel molds and gravity pouring, we achieve superior metallurgical properties compared to traditional sand casting, with better surface finish.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>2.0 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/gdc4.png" alt="GDC Sample 4"></div>
+                    <div class="slide-details">
+                        <h3>Penta Covent Top</h3>
+                        <p>A specialized top cover component for lighting and industrial applications. Features smooth external aesthetics and consistent internal density.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>1.25 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/gdc5.png" alt="GDC Sample 5"></div>
+                    <div class="slide-details">
+                        <h3>Small Bracket Castings</h3>
+                        <p>Gravity die casting isn't just for massive parts. We produce precise, small structural brackets with excellent repeatability and high tensile strength.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>300 GMS</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/gdc6.png" alt="GDC Sample 6"></div>
+                    <div class="slide-details">
+                        <h3>Jacket Casting</h3>
+                        <p>Complex internal coring achieved through advanced GDC techniques, providing excellent fluid channels for thermal management systems.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>40.0 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-gdc', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-gdc', 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sand" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span>
+            <div class="carousel-container" id="carousel-sand">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/sand1.png" alt="Sand Casting 1"></div>
+                    <div class="slide-details">
+                        <h3>Massive Car Roof Press Die</h3>
+                        <p>An extraordinary showcase of our large-scale sand casting capabilities. Pouring nearly a metric ton of molten aluminum requires immense expertise in gating design and temperature control to prevent warping.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>987.0 KG</span></div>
+                            <div class="spec-item"><span class="spec-label">Category:</span><span>Automotive Tooling</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/sand2.png" alt="Sand Casting 2"></div>
+                    <div class="slide-details">
+                        <h3>15/8 Core Box Casting</h3>
+                        <p>Our highest capacity single pour. Managing a 1280 Kg aluminum pour involves massive foundry infrastructure, precise metallurgical chemistry, and days of controlled cooling.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>1280.0 KG</span></div>
+                            <div class="spec-item"><span class="spec-label">Process:</span><span>Heavy Sand Casting</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/sand3.png" alt="Sand Casting 3"></div>
+                    <div class="slide-details">
+                        <h3>Core Box Casting 545</h3>
+                        <p>Mid-range heavy industrial sand casting. We utilize premium silica sands and advanced binders to ensure the mold maintains its integrity under the extreme hydrostatic pressure of liquid metal.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>670.0 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/sand4.png" alt="Sand Casting 4"></div>
+                    <div class="slide-details">
+                        <h3>Standard Core Box</h3>
+                        <p>Perfect for low-volume, highly complex tooling components where creating a steel die would be cost-prohibitive. Sand casting offers incredible flexibility for massive parts.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Weight:</span><span>356.0 KG</span></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-sand', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-sand', 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-machining" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-machining')">&times;</span>
+            <div class="carousel-container" id="carousel-machining">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/machining1.png" alt="Machining 1"></div>
+                    <div class="slide-details">
+                        <h3>Splined Drive Shafts</h3>
+                        <p>Precision CNC turned and milled drive shafts. Achieving perfect concentricity and spline pitch requires rigid machine setups and continuous dimensional inspection during the run.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Operation:</span><span>Turning & Splining</span></div>
+                            <div class="spec-item"><span class="spec-label">Tolerance:</span><span>± 0.01 mm</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/machining2.png" alt="Machining 2"></div>
+                    <div class="slide-details">
+                        <h3>Post-Cast Machined Housings</h3>
+                        <p>Die castings often require critical surfaces to be machined flat. We use high-speed VMC centers to face, drill, and tap castings, providing a completely finished, ready-to-assemble part to our clients.</p>
+                        <div class="tech-specs">
+                            <div class="spec-item"><span class="spec-label">Machine:</span><span>VMC AMS 1060V</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/machining3.png" alt="Machining 3"></div>
+                    <div class="slide-details">
+                        <h3>Precision Threaded Components</h3>
+                        <p>Utilizing our dedicated tapping machines (M3 - M16) alongside CNC turning to produce intricate threaded inserts and fasteners with perfect thread profiles.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/machining4.png" alt="Machining 4"></div>
+                    <div class="slide-details">
+                        <h3>Complex Turned Profiles</h3>
+                        <p>High-volume precision turning on our CNC ACE Micro Jobber machines. These setups allow us to hold incredibly tight diametrical tolerances across thousands of parts.</p>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-machining', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-machining', 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Carousels for Facilities -->
     <div id="modal-fac-machining" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-fac-machining')">&times;</span>
-            <h3 class="modal-caption">Genuine Machining Setup</h3>
-            <div class="modal-gallery">
-                <img src="images/real/fac_machining1.png" alt="Machining Setup 1">
-                <img src="images/real/fac_machining2.png" alt="Machining Setup 2">
+            <div class="carousel-container" id="carousel-fac-machining">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/fac_machining1.png" alt="Fac Machining 1"></div>
+                    <div class="slide-details">
+                        <h3>VMC AMS 1060V</h3>
+                        <p><strong>Technical Significance:</strong> Vertical Machining Centers (VMCs) are the backbone of our precision finishing. The AMS 1060V features a high-rigidity spindle and massive travel area, allowing us to perform high-speed milling, drilling, and tapping on large castings without repositioning the part, eliminating tolerance stacking errors.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_machining2.png" alt="Fac Machining 2"></div>
+                    <div class="slide-details">
+                        <h3>CNC LMW LL20TL5 Turning Center</h3>
+                        <p><strong>Technical Significance:</strong> Our advanced turning centers are crucial for producing perfectly concentric cylindrical components. With high rapid traverse rates and rigid slant-bed designs, they drastically reduce cycle times while maintaining micro-level accuracy.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_machining3.png" alt="Fac Machining 3"></div>
+                    <div class="slide-details">
+                        <h3>CNC ACE Micro J300</h3>
+                        <p><strong>Technical Significance:</strong> Compact but incredibly rigid, the ACE Micro series is optimized for high-volume batch production of smaller critical components. It ensures repeatable precision across thousands of cycles.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_machining4.png" alt="Fac Machining 4"></div>
+                    <div class="slide-details">
+                        <h3>Organized Machining Floor</h3>
+                        <p><strong>Technical Significance:</strong> A clean, well-lit, and systematically arranged 5S shop floor directly correlates to lower defect rates. Proper spacing between our VMC and CNC lines ensures safe material handling and efficient workflow.</p>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-fac-machining', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-fac-machining', 1)">&#10095;</button>
             </div>
         </div>
     </div>
+
     <div id="modal-fac-casting" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-fac-casting')">&times;</span>
-            <h3 class="modal-caption">Genuine Casting Facilities</h3>
-            <div class="modal-gallery">
-                <img src="images/real/fac_casting1.jpeg" alt="Casting Setup 1">
-                <img src="images/real/fac_casting2.jpg" alt="Casting Setup 2">
+            <div class="carousel-container" id="carousel-fac-casting">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/fac_casting1.jpeg" alt="Fac Casting 1"></div>
+                    <div class="slide-details">
+                        <h3>Heavy Duty Casting Shed</h3>
+                        <p><strong>Technical Significance:</strong> High-tonnage die casting requires immense infrastructure. Our factory features high ceilings for thermal ventilation, heavy-duty overhead cranes for mold changes, and reinforced flooring to absorb the shock of our 900 TON Yizumi machines locking.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_casting2.jpg" alt="Fac Casting 2"></div>
+                    <div class="slide-details">
+                        <h3>Melting & Holding Furnaces</h3>
+                        <p><strong>Technical Significance:</strong> Metallurgical integrity starts at the melt. Our temperature-controlled holding furnaces prevent oxide formation and gas porosity before the metal is ever injected into the die, ensuring superior mechanical properties in the final cast.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_casting3.jpg" alt="Fac Casting 3"></div>
+                    <div class="slide-details">
+                        <h3>HPDC Machine Setup</h3>
+                        <p><strong>Technical Significance:</strong> High Pressure Die Casting (HPDC) forces molten metal into a steel die under immense pressure. This rapid injection allows for extremely thin wall sections, smooth surface finishes, and near-net-shape components that require minimal secondary machining.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_casting4.jpg" alt="Fac Casting 4"></div>
+                    <div class="slide-details">
+                        <h3>Hot Chamber vs Cold Chamber</h3>
+                        <p><strong>Technical Significance:</strong> We maintain both Hot Chamber (up to 138 TON) and Cold Chamber (up to 280 TON) machines. This versatility allows us to cast everything from low-melting-point Zinc alloys in rapid cycles, to high-strength Aluminum alloys for structural automotive parts.</p>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-fac-casting', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-fac-casting', 1)">&#10095;</button>
             </div>
         </div>
     </div>
+
     <div id="modal-fac-inspection" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-fac-inspection')">&times;</span>
-            <h3 class="modal-caption">Genuine Inspection Setup</h3>
-            <div class="modal-gallery">
-                <img src="images/real/fac_inspection1.jpg" alt="Inspection Setup 1">
+            <div class="carousel-container" id="carousel-fac-inspection">
+                <div class="carousel-slide active">
+                    <div class="slide-image"><img src="images/real/fac_inspection1.jpg" alt="Fac Inspection 1"></div>
+                    <div class="slide-details">
+                        <h3>NDT Dye Penetrant Testing Lab</h3>
+                        <p><strong>Technical Significance:</strong> Visual inspection isn't enough for safety-critical components. We use Non-Destructive Dye Penetrant (NDT-DP) testing to draw bright red dye into microscopic surface cracks or porosity, exposing structural flaws that the human eye cannot see. This guarantees zero-defect deliveries.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-image"><img src="images/real/fac_inspection2.jpg" alt="Fac Inspection 2"></div>
+                    <div class="slide-details">
+                        <h3>Precision Gauge Setup</h3>
+                        <p><strong>Technical Significance:</strong> Our inspection room utilizes high-end Digital Height Gauges and customized Air Gauges. Air gauging uses pneumatic pressure to measure bore diameters down to micron-level accuracy without scratching the machined surface.</p>
+                    </div>
+                </div>
+                <button class="carousel-prev" onclick="changeSlide('carousel-fac-inspection', -1)">&#10094;</button>
+                <button class="carousel-next" onclick="changeSlide('carousel-fac-inspection', 1)">&#10095;</button>
             </div>
         </div>
     </div>
