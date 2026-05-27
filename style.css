@@ -822,18 +822,68 @@ footer {
 }
 
 .close-modal {
-    color: #fff;
     position: absolute;
-    top: -30px;
-    right: 0;
+    top: 15px;
+    right: 20px;
+    color: white;
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
 }
 
 .close-modal:hover {
-    color: var(--accent-primary);
+    background: var(--accent-primary);
+}
+
+@media (max-width: 900px) {
+    .carousel-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .slide-image {
+        flex: 0 0 auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 0;
+    }
+    
+    .slide-image img {
+        max-height: 400px;
+    }
+    
+    .slide-details {
+        flex: 0 0 auto;
+        padding: 2rem;
+    }
+    
+    .slide-details h3 {
+        font-size: 1.5rem;
+    }
+    
+    .slide-details p {
+        font-size: 1rem;
+    }
+    
+    .carousel-prev, .carousel-next {
+        top: 30%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .carousel-prev { left: 10px; }
+    .carousel-next { right: 10px; }
 }
 
 @keyframes zoomIn {
