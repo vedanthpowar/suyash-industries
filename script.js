@@ -196,3 +196,14 @@ window.changeSlide = function(carouselId, direction) {
     
     slides[nextIndex].classList.add('active');
 }
+
+// First-Hover animation logic for product cards
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('hover-animated')) {
+                this.classList.add('hover-animated');
+            }
+        }, { once: true });
+    });
+});
