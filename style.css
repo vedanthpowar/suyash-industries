@@ -355,6 +355,63 @@ section {
     font-size: 0.9rem;
 }
 
+/* Mission, Vision, Values */
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.mvv-card {
+    background: rgba(14, 165, 233, 0.03);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.mvv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.mvv-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mvv-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.mvv-card p, .mvv-card .value-list li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.value-list {
+    list-style: none;
+    padding: 0;
+}
+
+.value-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.value-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
+
 /* Capabilities Section */
 .cards-grid {
     display: grid;
@@ -1263,6 +1320,15 @@ footer {
     .hero-buttons a {
         width: 100%;
         text-align: center;
+    }
+
+    .hero {
+        padding-bottom: 5rem;
+    }
+    
+    .scroll-indicator {
+        bottom: 0.5rem;
+        transform: translateX(-50%) scale(0.8);
     }
 
     .cards-grid {
