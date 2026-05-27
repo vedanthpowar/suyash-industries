@@ -845,6 +845,13 @@ footer {
 }
 
 @media (max-width: 900px) {
+    .modal-content {
+        margin: 10px auto;
+        width: 95%;
+        max-height: 95vh;
+        overflow-y: auto; /* Allow scrolling inside the modal content on mobile */
+    }
+
     .carousel-container {
         flex-direction: column;
         min-height: auto;
@@ -854,28 +861,36 @@ footer {
         flex: 0 0 auto;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
-        padding: 20px 0;
+        padding: 0;
+        height: 350px; /* Fixed height for image area on mobile */
     }
     
     .slide-image img {
-        max-height: 400px;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
     
     .slide-details {
         flex: 0 0 auto;
-        padding: 2rem;
+        padding: 1.5rem;
     }
     
     .slide-details h3 {
         font-size: 1.5rem;
+        margin-top: 10px;
     }
     
     .slide-details p {
         font-size: 1rem;
     }
     
+    .tech-specs {
+        margin-bottom: 2rem; /* Give some breathing room at the bottom */
+    }
+
     .carousel-prev, .carousel-next {
-        top: 30%;
+        top: 175px; /* Center arrows over the 350px high image */
         transform: translateY(-50%);
         width: 40px;
         height: 40px;
@@ -884,6 +899,37 @@ footer {
     
     .carousel-prev { left: 10px; }
     .carousel-next { right: 10px; }
+
+    .close-modal {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-image {
+        height: 250px;
+    }
+    .carousel-prev, .carousel-next {
+        top: 125px;
+        width: 35px;
+        height: 35px;
+    }
+    .slide-details {
+        padding: 1rem;
+    }
+    .slide-details h3 {
+        font-size: 1.3rem;
+    }
+    .spec-item {
+        flex-direction: column;
+    }
+    .spec-label {
+        margin-bottom: 5px;
+    }
 }
 
 @keyframes zoomIn {
